@@ -2,25 +2,25 @@
 import { Image } from 'astro:assets';
 import H1 from "../components/h1.astro";
 import InfoLayout from "../layouts/InfoLayout.astro";
-import Meloso from "../assets/Meloso.png";
-import Banana from "../assets/Banana.png";
-import OSPA from "../assets/OSPA.png";
+import Meloso from "src/assets/Meloso.png";
+import Banana from "src/assets/Banana.png";
+import OSPA from "src/assets/OSPA.png";
 
 const projects = [
      {
           title: "Meloso Brunch",
           description: "Web moderna y amigable para Melosobrunch Brunch & Coffee con chatbot vectorial integrado",
-          image: ../assets/Meloso.png
+          image: Meloso
      },
      {
           title: "Banana Verde",
           description: "Web moderna, colorida y responsive para el chiringuito Banana Verde",
-          image: ../assets/Banana.png
+          image: Banana
      },
      {
           title: "O'SPA",
           description: "Web moderna inspirada en el sector cinematográfico para el local O'SPA",
-          image: ../assets/OSPA.png
+          image: OSPA
      }];
 ---
 
