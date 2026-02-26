@@ -31,17 +31,19 @@ const projects = [
           <ul class="mt-4 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 sm:gap-8">
                {projects.map((project) => (
                     <li>
-                         <img 
-                              src={project.image.src} 
-                              alt={project.title} 
-                              width={project.image.width}
-                              height={project.image.height}
-                              class="aspect-[1/0.5625] object-center object-cover rounded-lg shadow-lg mb-4 sm:mb-0 sm:mr-4"
-                         />
-                         <div class="p-1 sm:p-2">
-                              <h2 class="text-base text-zinc-100">{project.title}</h2>
-                              <p class="text-sm text-zinc-400 text-balance">{project.description}</p>
-                         </div>
+                         <a href="google.com" class="group block hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:-translate-y-2 hover:bg-green-900/20 rounded-xl p-4 sm:p-6 border border-green-500/20 hover:border-green-400">
+                              <img 
+                                   src={project.image.src} 
+                                   alt={project.title} 
+                                   width={project.image.width}
+                                   height={project.image.height}
+                                   class="aspect-[1.5/0.84375] object-center object-cover rounded-lg shadow-lg mb-4 sm:mb-0 sm:mr-4"
+                              />
+                              <div class="p-1 sm:p-2">
+                                   <h2 class="text-base text-zinc-100">{project.title}</h2>
+                                   <p class="text-sm text-zinc-400 text-balance">{project.description}</p>
+                              </div>
+                         </a>
                     </li>
                ))}
           </ul>
