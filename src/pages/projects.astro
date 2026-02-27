@@ -25,32 +25,32 @@ const projects = [
 ---
 
 <InfoLayout>
-     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
-          <H1> Proyectos </H1>
+  <div class="p-4 sm:pt-8 sm:px-8 pb-20 min-h-dvh max-w-7xl mx-auto">  <!-- ← px-12→px-8 + max-w -->
+    <H1> Proyectos </H1>
 
-          <ul class="mt-4 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-26 sm:gap-8">
-               {projects.map((project) => (
-                    <li>
-                         <a class="group block hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-2 hover:bg-blue-900/20 rounded-xl p-4 sm:p-6 border border-blue-500/20 hover:border-blue-400 h-full w-96">
-                              <div class="flex flex-col h-full">  <!-- ← Contenedor flex vertical -->
-                                   <div class="flex-shrink-0 mb-4">  <!-- ← Imagen fija -->
-                                        <img 
-                                        src={project.image.src} 
-                                        alt={project.title} 
-                                        width={project.image.width}
-                                        height={project.image.height}
-                                        class="w-full aspect-[1.5/0.84375] object-center object-cover rounded-lg shadow-lg"
-                                        />
-                                   </div>
-                                   <div class="flex-1 flex flex-col justify-end p-1 sm:p-2">  <!-- ← Texto ocupa resto -->
-                                        <h2 class="text-base text-zinc-100 font-semibold mb-1">{project.title}</h2>
-                                        <p class="text-sm text-zinc-400 text-balance flex-1">{project.description}</p>
-                                   </div>
-                              </div>
-                         </a>
-
-                    </li>
-               ))}
-          </ul>
-     </div>
+    <ul class="mt-4 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12 lg:gap-16 xl:gap-20">  <!-- ← gap responsive -->
+      {projects.map((project) => (
+        <li class="justify-self-center">  <!-- ← Centra cada li -->
+          <a class="group block hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-2 hover:bg-blue-900/20 rounded-xl p-6 sm:p-8 border border-blue-500/20 hover:border-blue-400 h-96 w-full max-w-md mx-auto">  <!-- ← w-full max-w-md -->
+            <div class="flex flex-col h-full">
+              <div class="flex-shrink-0 mb-6">
+                <img 
+                  src={project.image.src} 
+                  alt={project.title} 
+                  width={project.image.width}
+                  height={project.image.height}
+                  class="w-full aspect-[4/3] object-center object-cover rounded-xl shadow-xl"  <!-- ← Más cuadrada -->
+                />
+              </div>
+              <div class="flex-1 flex flex-col justify-end p-4">
+                <h2 class="text-lg text-zinc-100 font-semibold mb-2">{project.title}</h2>
+                <p class="text-base text-zinc-400 text-balance">{project.description}</p>
+              </div>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
 </InfoLayout>
+
